@@ -21,10 +21,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Login to GHCR
         run: |
-          echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u eliasdh-com --password-stdin
+          echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u eliasdhcom --password-stdin
       - name: Build/Push Backend Docker Image
         run: |
-          docker build --push -t ghcr.io/eliasdh-com/XXX-backend:latest ./App/Backend
+          docker build --push -t ghcr.io/eliasdhcom/XXX-backend:latest ./App/Backend
 
   build-push-frontend:
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
           npm run prod
       - name: Login to GHCR
         run: |
-          echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u eliasdh-com --password-stdin
+          echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u eliasdhcom --password-stdin
       - name: Build/Push Frontend Docker Image
         run: |
-          docker build --push -t ghcr.io/eliasdh-com/XXX-frontend:latest ./App/Frontend
+          docker build --push -t ghcr.io/eliasdhcom/XXX-frontend:latest ./App/Frontend
