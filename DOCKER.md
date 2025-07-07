@@ -10,18 +10,18 @@
 
 - Pull the latest image and run the container
 ```bash
-sudo docker pull ghcr.io/eliasdh-com/XXX-frontend:latest
-sudo docker run --name XXX-frontend-container -p 80:80 -d ghcr.io/eliasdh-com/XXX-frontend:latest
+sudo docker pull ghcr.io/eliasdhcom/XXX-frontend:latest
+sudo docker run --name XXX-frontend-container -p 80:80 -d ghcr.io/eliasdhcom/XXX-frontend:latest
 ```
 
 - Check the logs
 ```bash
-sudo docker logs displaylevelupbe-frontend-container
+sudo docker logs XXX-frontend-container
 ```
 
 - Stop and remove the existing container and image
 ```bash
 sudo docker stop XXX-frontend-container
 sudo docker rm XXX-frontend-container
-sudo docker rmi ghcr.io/eliasdh-com/XXX-frontend:latest
+sudo docker rmi ghcr.io/eliasdhcom/XXX-frontend:latest
 ```
